@@ -33,3 +33,31 @@ curl \
 --header 'Content-Type: application/json' \
 --data-raw '{"query":"mutation {\n    createPost(title: \"New Title\", authorId: \"Author2\", text: \"New Text\") {\n id\n       category\n        author {\n            id\n            name\n        }\n    }\n}"}'
 ```
+
+Test Mutations through altaire plugin
+```
+mutation {
+  addPost(
+    title: "string"
+    text: "string"
+    category: "string"
+    authorId: "Author0"
+  ) {
+    id
+    title
+    text
+    category
+    author {
+      id
+      name
+      thumbnail
+    }
+    first_author {
+      id
+      name
+      thumbnail
+    }
+  }
+}
+
+```
