@@ -29,4 +29,15 @@ public class Author {
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
     }
+
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Author{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", thumbnail='").append(thumbnail).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

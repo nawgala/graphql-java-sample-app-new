@@ -3,7 +3,8 @@ type Post {
     title: String!
     text: String!
     category: String
-    author:Author!
+    author: Author!
+    first_author: Author!
 }
 
 type Author {
@@ -19,5 +20,5 @@ type Query {
 
 # The Root Mutation for the application
 type Mutation {
-    createPost(title: String!, text: String!, category: String, authorId: String!) : Post!
+    addPost(title: String!, text: String!, category: String, authorId: String!) : Post!
 }
